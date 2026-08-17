@@ -16,6 +16,7 @@ export const site = {
   facebook: 'https://www.facebook.com/marco.sanchioni2/',
   cv: '/assets/cv-marco-sanchioni.pdf',
   portrait: '/assets/portrait.jpg',
+  cover: '/assets/hero-cover.webp',
 };
 
 export const nav = [

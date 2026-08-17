@@ -7,11 +7,13 @@ import { site } from '../data/site';
   title="Marco Sanchioni — Philosophy of Physics"
   description="Marco Sanchioni — Associate Professor of Philosophy of Science at the Sophia University Institute. Foundations of physics and philosophy of science: quantum gravity, quantum mechanics, gauge theories, spacetime."
 >
-  <section class="hero">
-    <div class="glow glow--silver glow--a" aria-hidden="true"></div>
+  <section class="hero cover">
+    <div class="cover-media" aria-hidden="true">
+      <img src={site.cover} alt="" width="1200" height="1117" fetchpriority="high" />
+    </div>
     <div class="glow glow--accent glow--b" aria-hidden="true"></div>
-    <div class="wrap hero-grid">
-      <div class="reveal">
+    <div class="wrap">
+      <div class="cover-body reveal">
         <span class="eyebrow">Philosophy of Physics</span>
         <h1>Marco Sanchioni</h1>
         <p class="role">Associate Professor of Philosophy of Science · Sophia University Institute</p>
@@ -22,15 +24,6 @@ import { site } from '../data/site';
           <a href="/research" class="btn btn--primary">Explore the research</a>
           <a href="/publications" class="btn btn--ghost">Publications</a>
         </div>
-      </div>
-      <div class="portrait reveal">
-        <img
-          src={site.portrait}
-          alt="Portrait of Marco Sanchioni"
-          width="800"
-          height="1000"
-          fetchpriority="high"
-        />
       </div>
     </div>
   </section>

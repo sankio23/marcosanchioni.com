@@ -7,19 +7,18 @@ import { site } from '../data/site';
   title="About — Marco Sanchioni"
   description="Marco Sanchioni — Associate Professor of Philosophy of Science and Vice Rector at the Sophia University Institute, with dual doctorates in theoretical physics and philosophy of physics."
 >
-  <section class="page-hero">
-    <div class="glow glow--silver glow--a" aria-hidden="true"></div>
-    <div class="wrap hero-grid">
-      <div class="reveal">
+  <section class="page-hero cover">
+    <div class="cover-media" aria-hidden="true">
+      <img src={site.cover} alt="" width="1200" height="1117" fetchpriority="high" />
+    </div>
+    <div class="wrap">
+      <div class="cover-body reveal">
         <span class="eyebrow">About</span>
         <h1>Marco Sanchioni</h1>
-        <p class="lead serif measure">
+        <p class="lead serif">
           Associate Professor of Philosophy of Science · Vice Rector, Sophia University Institute ·
           Founding Director, International Center for Transdisciplinary Studies
         </p>
-      </div>
-      <div class="portrait reveal">
-        <img src={site.portrait} alt="Portrait of Marco Sanchioni" width="800" height="1000" />
       </div>
     </div>
   </section>
