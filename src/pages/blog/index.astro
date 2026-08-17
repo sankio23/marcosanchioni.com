@@ -1,0 +1,55 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { getCollection } from 'astro:content';
+
+const posts = (await getCollection('blog', ({ data }) => !data.draft)).sort(
+  (a, b) => b.data.date.valueOf() - a.data.date.valueOf()
+);
+
+const fmt = (d: Date) =>
+  d.toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' });
+---
+
+<Layout
+  title="Blog — Marco Sanchioni"
+  description="Notes and essays on the foundations of physics, philosophy of science, and the ethics of artificial intelligence."
+>
+  <section class="page-hero">
+    <div class="glow glow--silver glow--a" aria-hidden="true"></div>
+    <div class="wrap reveal">
+      <span class="eyebrow">Blog</span>
+      <h1>Notes</h1>
+      <p class="lead serif" style="max-width:58ch;">
+        Shorter pieces on the foundations of physics, the philosophy of science, and the ethics of
+        artificial intelligence — written between papers.
+      </p>
+    </div>
+  </section>
+
+  <section class="band band--paper2">
+    <div class="wrap">
+      {
+        posts.length === 0 ? (
+          <p class="lead">No posts yet.</p>
+        ) : (
+          <ul class="post-list">
+            {posts.map((post) => (
+              <li class="post-item reveal">
+                <p class="post-meta">
+                  <time datetime={post.data.date.toISOString()}>{fmt(post.data.date)}</time>
+                </p>
+                <h2><a href={`/blog/${post.id}`}>{post.data.title}</a></h2>
+                <p>{post.data.description}</p>
+                {post.data.tags.length > 0 && (
+                  <div class="post-tags">
+                    {post.data.tags.map((t) => <span class="tag">{t}</span>)}
+                  </div>
+                )}
+              </li>
+            ))}
+          </ul>
+        )
+      }
+    </div>
+  </section>
+</Layout>

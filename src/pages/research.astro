@@ -1,0 +1,95 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const lines = [
+  {
+    n: '01',
+    title: 'Quantum gravity & black holes',
+    body: 'The paradoxes surrounding black holes — information loss, firewalls, holographic reconstruction — as a window into quantum gravity.',
+  },
+  {
+    n: '02',
+    title: 'Relational quantum mechanics',
+    body: 'Quantum mechanics approached as a genuinely relational theory: measurement, entanglement, and the ontological status of quantum information.',
+  },
+  {
+    n: '03',
+    title: 'Non-relativistic gravity & spacetime structure',
+    body: 'What spacetime looks like outside the relativistic setting — Newton–Cartan and Carrollian geometries, torsion, and the structure of time.',
+  },
+  {
+    n: '04',
+    title: 'Supersymmetry & supergravity',
+    body: 'The ontology of supersymmetric theories: superspace, supermanifolds, and the geometry–matter distinction in supergravity.',
+  },
+  {
+    n: '05',
+    title: 'EFT & emergence',
+    body: 'How physical structure emerges across scales — effective field theories, renormalization, and higher-form symmetries.',
+  },
+  {
+    n: '06',
+    title: 'Dualities',
+    body: 'When two theories are physically equivalent, what do they share? The work focuses on duality, inter-theory relations, and their ontological limits.',
+  },
+  {
+    n: '07',
+    title: 'Meta-ontology & realism',
+    body: 'What does realism about fundamental physics require? The work develops Progress Crucial Realism — grounded in the indispensable structures of physical theories.',
+  },
+  {
+    n: '08',
+    title: 'Ethics & philosophy of AI',
+    body: 'How should institutions — scientific, educational, civic — respond to generative AI? The work is developed within the AI Oath project, on ethical standards for responsible AI use.',
+  },
+  {
+    n: '09',
+    title: 'Quantum information & information theory',
+    body: 'What is information in quantum mechanics? The work develops a notion of relational information grounded in entanglement rather than epistemic states, distinguishing it from QBism, Wheeler’s “it from bit”, and standard communication-theoretic accounts.',
+  },
+];
+---
+
+<Layout
+  title="Research — Marco Sanchioni"
+  description="Nine research lines in the foundations and philosophy of physics: quantum gravity and black holes, relational quantum mechanics, non-relativistic gravity, supersymmetry, emergence, dualities, meta-ontology, philosophy of AI, and quantum information."
+>
+  <section class="page-hero">
+    <div class="glow glow--silver glow--a" aria-hidden="true"></div>
+    <div class="wrap reveal">
+      <span class="eyebrow">Research</span>
+      <h1>Research lines</h1>
+      <p class="lead serif" style="max-width:58ch;">
+        Nine connected lines of work in the foundations and philosophy of physics, from the
+        interior of black holes to the conditions under which realism about fundamental
+        theories remains defensible.
+      </p>
+    </div>
+  </section>
+
+  <section class="band band--paper2">
+    <div class="wrap">
+      <div class="grid-research">
+        {
+          lines.map((l) => (
+            <article class="rcard reveal">
+              <span class="num">{l.n}</span>
+              <h2>{l.title}</h2>
+              <p>{l.body}</p>
+            </article>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .rcard h2 {
+    font-family: var(--display);
+    font-size: clamp(1.2rem, 2.5vw, 1.5rem);
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    margin: 0.5rem 0 0.6rem;
+  }
+</style>

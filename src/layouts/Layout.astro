@@ -1,0 +1,107 @@
+---
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { site } from '../data/site';
+// Self-hosted fonts: no third-party request, no GDPR exposure, no render-blocking CDN.
+import '@fontsource-variable/inter';
+import '@fontsource/spectral/300.css';
+import '@fontsource/spectral/400.css';
+import '@fontsource/spectral/400-italic.css';
+import '@fontsource/spectral/600.css';
+import '../styles/style.css';
+
+interface Props {
+  title: string;
+  description?: string;
+  /** Structured data for this page; defaults to the Person profile. */
+  jsonLd?: Record<string, unknown>;
+  ogType?: string;
+  publishedTime?: string;
+}
+
+const {
+  title,
+  description = site.defaultDescription,
+  jsonLd,
+  ogType = 'website',
+  publishedTime,
+} = Astro.props;
+
+// GitHub Pages serves directory-style URLs, so the canonical form carries a trailing slash.
+const path = Astro.url.pathname;
+const canonicalPath = path === '/' ? '/' : path.replace(/\/?$/, '/');
+const canonical = new URL(canonicalPath, site.url).href;
+const ogImage = new URL('/assets/og-image.jpg', site.url).href;
+
+const personLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Person',
+  name: 'Marco Sanchioni',
+  url: site.url,
+  image: new URL(site.portrait, site.url).href,
+  email: `mailto:${site.email}`,
+  jobTitle: site.jobTitle,
+  affiliation: {
+    '@type': 'CollegeOrUniversity',
+    name: site.affiliation,
+    url: site.affiliationUrl,
+  },
+  alumniOf: [
+    { '@type': 'CollegeOrUniversity', name: 'University of Urbino “Carlo Bo”' },
+    { '@type': 'CollegeOrUniversity', name: 'Niels Bohr Institute, University of Copenhagen' },
+    { '@type': 'CollegeOrUniversity', name: 'University of Trento' },
+    { '@type': 'CollegeOrUniversity', name: 'University of Bologna' },
+  ],
+  knowsAbout: [
+    'Philosophy of physics',
+    'Quantum gravity',
+    'Black holes',
+    'Relational quantum mechanics',
+    'Spacetime',
+    'Philosophy of science',
+  ],
+  sameAs: [site.orcid, site.scholar, site.philpeople, site.linkedin, site.twitter],
+  identifier: site.orcid,
+};
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
+
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="sitemap" href="/sitemap-index.xml" />
+    <link rel="alternate" type="application/rss+xml" title="Marco Sanchioni — Blog" href="/rss.xml" />
+
+    <meta property="og:site_name" content="Marco Sanchioni" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content={ogType} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:image" content={ogImage} />
+    {publishedTime && <meta property="article:published_time" content={publishedTime} />}
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImage} />
+
+    <noscript><style>.reveal { opacity: 1 !important; transform: none !important; }</style></noscript>
+
+    <script is:inline type="application/ld+json" set:html={JSON.stringify(jsonLd ?? personLd)} />
+  </head>
+  <body>
+    <Header />
+    <main id="main">
+      <slot />
+    </main>
+    <Footer />
+    <script src="../scripts/main.ts"></script>
+  </body>
+</html>

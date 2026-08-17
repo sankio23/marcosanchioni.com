@@ -1,0 +1,36 @@
+---
+import { nav } from '../data/site';
+
+const { pathname } = Astro.url;
+const current = pathname.replace(/\/$/, '') || '/';
+
+function isCurrent(href: string) {
+  if (href === '/') return current === '/';
+  return current === href || current.startsWith(href + '/');
+}
+---
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <nav class="nav wrap" aria-label="Primary">
+    <a href="/" class="brand"><span class="mark" aria-hidden="true"></span>Marco Sanchioni</a>
+    <button class="nav-toggle" aria-label="Menu" aria-expanded="false" aria-controls="nav-links">
+      <span></span><span></span><span></span>
+    </button>
+    <div class="nav-links" id="nav-links">
+      {nav.map((item) =>
+        item.children ? (
+          <div class="nav-dropdown">
+            <a href={item.href} aria-current={isCurrent(item.href) ? 'page' : undefined}>{item.label}</a>
+            <div class="nav-dropdown-menu">
+              {item.children.map((child) => <a href={child.href}>{child.label}</a>)}
+            </div>
+          </div>
+        ) : (
+          <a href={item.href} aria-current={isCurrent(item.href) ? 'page' : undefined}>{item.label}</a>
+        )
+      )}
+    </div>
+  </nav>
+</header>
