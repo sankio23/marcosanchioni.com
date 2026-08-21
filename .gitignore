@@ -5,3 +5,7 @@ dist/
 *.log
 .env
 .env.production
+
+# transfer scratch file used to sync from the cloud session
+.xfer.tgz
+.site-update.tgz
