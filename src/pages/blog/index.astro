@@ -32,22 +32,25 @@ const fmt = (d: Date) =>
         posts.length === 0 ? (
           <p class="lead">No posts yet.</p>
         ) : (
-          <ul class="post-list">
-            {posts.map((post) => (
-              <li class:list={['post-item', 'reveal', !post.data.hero && 'post-item--plain']}>
+          <ul class="card-list">
+            {posts.map((post, i) => (
+              <li class:list={['card', 'reveal', !post.data.hero && 'card--plain']}>
                 {post.data.hero && (
-                  <a class="post-thumb" href={`/blog/${post.id}`} tabindex="-1" aria-hidden="true">
+                  <div class="card__media" aria-hidden="true">
                     <img
-                      src={post.data.thumb ?? post.data.hero}
+                      src={post.data.hero}
+                      srcset={post.data.thumb ? `${post.data.thumb} 900w, ${post.data.hero} 1800w` : undefined}
+                      sizes="(max-width: 760px) 100vw, 1180px"
                       alt=""
-                      width="720"
-                      height="450"
-                      loading="lazy"
+                      width="1800"
+                      height="900"
+                      loading={i === 0 ? 'eager' : 'lazy'}
+                      fetchpriority={i === 0 ? 'high' : undefined}
                       decoding="async"
                     />
-                  </a>
+                  </div>
                 )}
-                <div class="post-body">
+                <div class="card__body">
                   <p class="post-meta">
                     <time datetime={post.data.date.toISOString()}>{fmt(post.data.date)}</time>
                   </p>
@@ -69,50 +72,70 @@ const fmt = (d: Date) =>
 </Layout>
 
 <style>
-  /* The list becomes a two-column card: picture, then text. A post with no
-     picture keeps the full measure rather than leaving a hole where the
-     thumbnail would be. The image is decorative — the title is the link
-     that matters — so it is hidden from assistive technology. */
-  .post-item {
-    display: grid;
-    grid-template-columns: minmax(0, 16rem) 1fr;
-    gap: clamp(1.25rem, 3vw, 2.5rem);
-    align-items: start;
-  }
-  .post-item--plain { grid-template-columns: 1fr; }
+  /* Each entry is a card with its picture behind the text, in the same
+     idiom as the post pages. A post with no picture falls back to a flat
+     surface rather than an empty frame. */
+  .card-list { list-style: none; display: grid; gap: 1.5rem; }
 
-  .post-thumb {
-    display: block;
+  .card {
+    position: relative;
+    isolation: isolate;
     overflow: hidden;
     border: 1px solid var(--line-soft);
-    border-radius: 3px;
-    background: var(--surface);
-  }
-  .post-thumb img {
-    width: 100%;
-    /* The width/height attributes are presentational hints; without
-       height:auto the definite height wins and aspect-ratio is ignored. */
-    height: auto;
-    aspect-ratio: 16 / 10;
-    object-fit: cover;
-    opacity: 0.82;
-    transition: opacity 0.35s ease, transform 0.6s ease;
-  }
-  .post-item:hover .post-thumb img,
-  .post-item:focus-within .post-thumb img {
-    opacity: 1;
-    transform: scale(1.035);
+    border-radius: 4px;
+    display: flex;
+    align-items: flex-end;
+    min-height: clamp(15rem, 26vh, 19rem);
+    padding: clamp(1.75rem, 3.5vw, 2.75rem);
   }
 
-  .post-body p { max-width: 62ch; }
+  .card__media { position: absolute; inset: 0; z-index: -2; }
+  .card__media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.7s ease;
+  }
+  .card:hover .card__media img,
+  .card:focus-within .card__media img { transform: scale(1.03); }
+
+  /* Scrim: a flat wash that guarantees the contrast ratio, plus a
+     bottom-weighted gradient that anchors the text. */
+  .card::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background:
+      linear-gradient(to top, rgba(10,10,11,.95) 0%, rgba(10,10,11,.82) 40%, rgba(10,10,11,.44) 100%),
+      radial-gradient(115% 95% at 10% 85%, rgba(10,10,11,.60), transparent 72%),
+      rgba(10,10,11,.28);
+  }
+
+  .card__body {
+    position: relative;
+    max-width: 60ch;
+    text-shadow: 0 1px 24px rgba(0,0,0,.6), 0 1px 3px rgba(0,0,0,.45);
+  }
+  .card .post-meta { color: var(--ink-soft); margin-bottom: 0.35rem; }
+  .card h2 { font-size: clamp(1.4rem, 3vw, 1.9rem); margin-bottom: 0.5rem; }
+  .card h2 a { color: var(--ink); }
+  .card h2 a:hover { color: var(--accent-soft); }
+  .card p { color: var(--ink-soft); }
+
+  .card--plain {
+    background: var(--surface);
+    min-height: 0;
+    padding: clamp(1.5rem, 3vw, 2.25rem);
+  }
+  .card--plain .card__body { text-shadow: none; }
 
   @media (prefers-reduced-motion: reduce) {
-    .post-thumb img { transition: none; }
-    .post-item:hover .post-thumb img { transform: none; }
+    .card__media img { transition: none; }
+    .card:hover .card__media img { transform: none; }
   }
 
-  @media (max-width: 760px) {
-    .post-item { grid-template-columns: 1fr; gap: 1.1rem; }
-    .post-thumb img { aspect-ratio: 2 / 1; }
+  @media (max-width: 640px) {
+    .card { min-height: 13rem; padding: 1.4rem; }
   }
 </style>
