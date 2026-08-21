@@ -9,7 +9,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
 };
 
 const { post } = Astro.props;
-const { Content, headings } = await render(post);
+const { Content } = await render(post);
 
 const fmt = (d: Date) =>
   d.toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' });
@@ -36,69 +36,58 @@ const articleLd = {
   <article>
     <section class="page-hero">
       <div class="glow glow--silver glow--a" aria-hidden="true"></div>
-      <div class="wrap reveal" style="max-width:76ch;">
-        <p class="post-meta">
-          <a href="/blog">Blog</a> ·
-          <time datetime={post.data.date.toISOString()}>{fmt(post.data.date)}</time>
-          {post.data.updated && <> · updated {fmt(post.data.updated)}</>}
-        </p>
-        <h1 style="font-size:clamp(2rem,4.5vw,3.2rem);">{post.data.title}</h1>
-        <p class="lead serif" style="max-width:60ch;">{post.data.description}</p>
-        {
-          post.data.tags.length > 0 && (
-            <div class="post-tags">
-              {post.data.tags.map((t) => <span class="tag">{t}</span>)}
-            </div>
-          )
-        }
+      <div class="wrap">
+        <div class="column reveal">
+          <p class="post-meta">
+            <a href="/blog">Blog</a> ·
+            <time datetime={post.data.date.toISOString()}>{fmt(post.data.date)}</time>
+            {post.data.updated && <> · updated {fmt(post.data.updated)}</>}
+          </p>
+          <h1>{post.data.title}</h1>
+          <p class="lead serif">{post.data.description}</p>
+          {
+            post.data.tags.length > 0 && (
+              <div class="post-tags">
+                {post.data.tags.map((t) => <span class="tag">{t}</span>)}
+              </div>
+            )
+          }
+        </div>
       </div>
     </section>
 
     <section class="band band--paper2">
       <div class="wrap">
-        {
-          headings.filter((h) => h.depth === 2).length > 2 && (
-            <nav class="toc reveal" aria-label="Table of contents">
-              <h2>Contents</h2>
-              <ul>
-                {headings
-                  .filter((h) => h.depth === 2)
-                  .map((h) => (
-                    <li><a href={`#${h.slug}`}>{h.text}</a></li>
-                  ))}
-              </ul>
-            </nav>
-          )
-        }
-        <div class="prose reveal">
-          <Content />
+        <div class="column">
+          <div class="prose reveal">
+            <Content />
+          </div>
+          <p class="back-link"><a href="/blog">← All posts</a></p>
         </div>
-        <p class="back-link"><a href="/blog">← All posts</a></p>
       </div>
     </section>
   </article>
 </Layout>
 
 <style>
-  .toc {
-    border: 1px solid var(--line);
-    border-radius: 12px;
-    padding: 1.4rem 1.6rem;
-    margin-bottom: 2.5rem;
-    max-width: 44ch;
-    background: var(--surface);
+  /* One reading column, centred on the page. The measure stays around 70
+     characters — the point at which the eye still finds the next line. */
+  .column {
+    max-width: 72ch;
+    margin-inline: auto;
   }
-  .toc h2 {
+  .column h1 {
+    font-size: clamp(2rem, 4.5vw, 3.2rem);
+  }
+  .column .lead {
+    max-width: 60ch;
+  }
+  .column .prose {
+    max-width: none;
+  }
+  .back-link {
+    margin-top: 3rem;
     font-family: var(--display);
-    font-size: 0.75rem;
-    font-weight: 600;
-    letter-spacing: 0.18em;
-    text-transform: uppercase;
-    color: var(--ink-dim);
-    margin-bottom: 0.7rem;
+    font-size: 0.92rem;
   }
-  .toc ul { list-style: none; }
-  .toc li + li { margin-top: 0.35rem; }
-  .toc a { font-size: 0.94rem; }
-  .back-link { margin-top: 3rem; font-family: var(--display); font-size: 0.92rem; }
 </style>
