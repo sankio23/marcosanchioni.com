@@ -2,6 +2,7 @@
 title: "Salad, Stew, Cake"
 description: "A week in Singapore, three ways of putting different things together, and whether categories built to describe disciplines transfer to ways of life."
 date: 2026-08-17
+hero: "/assets/singapore-hero.webp"
 tags: ["transdisciplinarity", "philosophy of AI", "Singapore"]
 ---
 

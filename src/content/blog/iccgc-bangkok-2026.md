@@ -2,6 +2,7 @@
 title: "Notes from ICCGC-WFB 2026, Bangkok"
 description: "Four days at an interfaith conference in Bangkok: what it means that traditions which will never agree on first principles converge, reliably, at the level of practice."
 date: 2026-08-21
+hero: "/assets/iccgc-bangkok-2026-hero.webp"
 tags: ["interfaith dialogue", "global citizenship", "Bangkok"]
 ---
 

@@ -11,6 +11,11 @@ export const getStaticPaths: GetStaticPaths = async () => {
 const { post } = Astro.props;
 const { Content } = await render(post);
 
+// A hero picture is opt-in, per post: `hero: "/assets/…"` in the front
+// matter. Without one the page keeps the plain dark header.
+const hero = post.data.hero;
+const heroPosition = post.data.heroPosition ?? 'center';
+
 const fmt = (d: Date) =>
   d.toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' });
 
@@ -22,6 +27,7 @@ const articleLd = {
   datePublished: post.data.date.toISOString(),
   dateModified: (post.data.updated ?? post.data.date).toISOString(),
   author: { '@type': 'Person', name: 'Marco Sanchioni', url: 'https://www.marcosanchioni.com' },
+  image: new URL(hero ?? '/assets/og-image.jpg', 'https://www.marcosanchioni.com').href,
   mainEntityOfPage: new URL(`/blog/${post.id}`, 'https://www.marcosanchioni.com').href,
 };
 ---
@@ -34,9 +40,22 @@ const articleLd = {
   publishedTime={post.data.date.toISOString()}
 >
   <article>
-    <section class="page-hero">
-      <div class="glow glow--silver glow--a" aria-hidden="true"></div>
-      <div class="wrap">
+    <section class:list={['post-hero', hero && 'post-hero--picture']}>
+      {
+        hero && (
+          <div class="post-hero__media" aria-hidden="true">
+            <img
+              src={hero}
+              alt=""
+              width="1800"
+              height="900"
+              fetchpriority="high"
+              style={`object-position: ${heroPosition};`}
+            />
+          </div>
+        )
+      }
+      <div class="wrap post-hero__inner">
         <div class="column reveal">
           <p class="post-meta">
             <a href="/blog">Blog</a> ·
@@ -70,14 +89,59 @@ const articleLd = {
 </Layout>
 
 <style>
-  /* One reading column, centred on the page. The measure stays around 70
-     characters — the point at which the eye still finds the next line. */
+  /* --- Hero -------------------------------------------------------
+     A picture behind the title, deliberately shorter than a full
+     landing-page hero: the post itself is the subject, the image is
+     only the doorway to it. ------------------------------------- */
+  .post-hero {
+    position: relative;
+    overflow: hidden;
+    isolation: isolate;
+    display: flex;
+    align-items: flex-end;
+    min-height: clamp(19rem, 40vh, 26rem);
+    padding-block: clamp(3rem, 6vw, 4.5rem) clamp(2.5rem, 5vw, 3.75rem);
+    border-bottom: 1px solid var(--line-soft);
+  }
+  .post-hero__media {
+    position: absolute;
+    inset: 0;
+    z-index: -2;
+  }
+  .post-hero__media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  /* Scrim. Two layers: a flat wash that guarantees the contrast ratio,
+     and a bottom-weighted gradient that anchors the text. */
+  .post-hero--picture::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background:
+      linear-gradient(to top, rgba(10,10,11,.93) 0%, rgba(10,10,11,.70) 48%, rgba(10,10,11,.40) 100%),
+      radial-gradient(120% 90% at 12% 80%, rgba(10,10,11,.55), transparent 70%),
+      rgba(10,10,11,.34);
+  }
+  .post-hero__inner { position: relative; width: 100%; }
+  /* Over a photograph the small metadata line is the first thing to lose
+     contrast, so it is lifted a step and everything gets a soft shadow. */
+  .post-hero--picture .column { text-shadow: 0 1px 24px rgba(0,0,0,.6), 0 1px 3px rgba(0,0,0,.45); }
+  .post-hero--picture .post-meta { color: var(--ink-soft); }
+  .post-hero h1 { margin: 0.6rem 0 1rem; }
+
+  /* --- Reading column ---------------------------------------------
+     One column, centred on the page, so the title sits directly over
+     the text that follows it. The measure stays around 70 characters. */
   .column {
     max-width: 72ch;
     margin-inline: auto;
   }
   .column h1 {
     font-size: clamp(2rem, 4.5vw, 3.2rem);
+    text-wrap: balance;
   }
   .column .lead {
     max-width: 60ch;
@@ -89,5 +153,9 @@ const articleLd = {
     margin-top: 3rem;
     font-family: var(--display);
     font-size: 0.92rem;
+  }
+
+  @media (max-width: 640px) {
+    .post-hero { min-height: 17rem; }
   }
 </style>
