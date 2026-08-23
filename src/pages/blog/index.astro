@@ -11,15 +11,14 @@ const fmt = (d: Date) =>
 ---
 
 <Layout
-  title="Blog — Marco Sanchioni"
+  title="Notes — Marco Sanchioni"
   description="Notes and essays on the foundations of physics, philosophy of science, and the ethics of artificial intelligence."
 >
-  <section class="page-hero">
+  <section class="page-hero page-hero--tight">
     <div class="glow glow--silver glow--a" aria-hidden="true"></div>
     <div class="wrap reveal">
-      <span class="eyebrow">Blog</span>
       <h1>Notes</h1>
-      <p class="lead serif" style="max-width:58ch;">
+      <p class="lead serif">
         Shorter pieces on the foundations of physics, the philosophy of science, and the ethics of
         artificial intelligence — written between papers.
       </p>
@@ -72,6 +71,12 @@ const fmt = (d: Date) =>
 </Layout>
 
 <style>
+  /* The list follows immediately, so this header does not need the full
+     landing-page height: it names the section and gets out of the way. */
+  .page-hero--tight { padding-block: clamp(2.25rem, 4vw, 3.25rem) clamp(1.5rem, 2.5vw, 2rem); }
+  .page-hero--tight h1 { margin: 0 0 .6rem; font-size: clamp(2rem, 4vw, 2.7rem); }
+  .page-hero--tight .lead { max-width: 56ch; }
+
   /* Each entry is a card with its picture behind the text, in the same
      idiom as the post pages. A post with no picture falls back to a flat
      surface rather than an empty frame. */

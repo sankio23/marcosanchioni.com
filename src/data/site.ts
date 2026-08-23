@@ -34,5 +34,5 @@ export const nav = [
   { href: '/talks', label: 'Talks' },
   { href: '/teaching', label: 'Teaching' },
   { href: '/outreach', label: 'Outreach' },
-  { href: '/blog', label: 'Blog' },
+  { href: '/blog', label: 'Notes' },
 ];

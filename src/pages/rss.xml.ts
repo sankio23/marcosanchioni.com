@@ -8,7 +8,7 @@ export async function GET(context: APIContext) {
   );
 
   return rss({
-    title: 'Marco Sanchioni — Blog',
+    title: 'Marco Sanchioni — Notes',
     description:
       'Notes and essays on the foundations of physics, philosophy of science, and the ethics of artificial intelligence.',
     site: context.site!,
