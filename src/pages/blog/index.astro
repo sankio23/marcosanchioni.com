@@ -12,20 +12,14 @@ const fmt = (d: Date) =>
 
 <Layout
   title="Notes — Marco Sanchioni"
-  description="Notes and essays on the foundations of physics, philosophy of science, and the ethics of artificial intelligence."
+  description="Marco Sanchioni — whatever I happen to be thinking about, written down before it is settled. Sometimes it comes out of the work, sometimes out of a trip or a conversation."
 >
-  <section class="page-hero page-hero--tight">
-    <div class="glow glow--silver glow--a" aria-hidden="true"></div>
-    <div class="wrap reveal">
-      <h1>Notes</h1>
-      <p class="lead serif">
-        Shorter pieces on the foundations of physics, the philosophy of science, and the ethics of
-        artificial intelligence — written between papers.
-      </p>
-    </div>
-  </section>
+  {/* The list speaks for itself, so nothing is printed above it. The
+      heading stays in the markup, hidden, because a page with no h1 has
+      no name for a screen reader navigating by headings. */}
+  <h1 class="visually-hidden">Notes</h1>
 
-  <section class="band band--paper2">
+  <section class="band band--paper2 band--first">
     <div class="wrap">
       {
         posts.length === 0 ? (
@@ -71,11 +65,20 @@ const fmt = (d: Date) =>
 </Layout>
 
 <style>
-  /* The list follows immediately, so this header does not need the full
-     landing-page height: it names the section and gets out of the way. */
-  .page-hero--tight { padding-block: clamp(2.25rem, 4vw, 3.25rem) clamp(1.5rem, 2.5vw, 2rem); }
-  .page-hero--tight h1 { margin: 0 0 .6rem; font-size: clamp(2rem, 4vw, 2.7rem); }
-  .page-hero--tight .lead { max-width: 56ch; }
+  /* Present to assistive technology and to search engines, absent from
+     the page. Not display:none, which would remove it from both. */
+  .visually-hidden {
+    position: absolute;
+    width: 1px; height: 1px;
+    margin: -1px; padding: 0;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
+    border: 0;
+  }
+
+  /* Nothing above it, so the band opens the page. */
+  .band--first { padding-block: clamp(2.5rem, 5vw, 4rem) clamp(3rem, 6vw, 5rem); }
 
   /* Each entry is a card with its picture behind the text, in the same
      idiom as the post pages. A post with no picture falls back to a flat

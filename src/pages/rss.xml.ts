@@ -10,7 +10,7 @@ export async function GET(context: APIContext) {
   return rss({
     title: 'Marco Sanchioni — Notes',
     description:
-      'Notes and essays on the foundations of physics, philosophy of science, and the ethics of artificial intelligence.',
+      'Whatever I happen to be thinking about, written down before it is settled. Sometimes it comes out of the work, sometimes out of a trip or a conversation.',
     site: context.site!,
     trailingSlash: false,
     items: posts.map((post) => ({
