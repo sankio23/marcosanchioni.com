@@ -81,6 +81,18 @@ const articleLd = {
           <div class="prose reveal">
             <Content />
           </div>
+          {
+            post.data.heroCredit && (
+              <p class="hero-credit">
+                Header photograph:{' '}
+                {post.data.heroCreditUrl ? (
+                  <a href={post.data.heroCreditUrl} target="_blank" rel="noopener">{post.data.heroCredit}</a>
+                ) : (
+                  post.data.heroCredit
+                )}
+              </p>
+            )
+          }
           <p class="back-link"><a href="/blog">← All posts</a></p>
         </div>
       </div>
@@ -149,6 +161,16 @@ const articleLd = {
   .column .prose {
     max-width: none;
   }
+  /* Attribution for a photograph that is not mine. Quiet, but present. */
+  .hero-credit {
+    margin-top: 3rem;
+    padding-top: 1.25rem;
+    border-top: 1px solid var(--line-soft);
+    font-family: var(--display);
+    font-size: 0.82rem;
+    color: var(--ink-dim);
+  }
+  .hero-credit + .back-link { margin-top: 1.5rem; }
   .back-link {
     margin-top: 3rem;
     font-family: var(--display);
