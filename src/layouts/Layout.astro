@@ -17,6 +17,8 @@ interface Props {
   jsonLd?: Record<string, unknown>;
   ogType?: string;
   publishedTime?: string;
+  /** Sharing card image for this page; defaults to the site card. */
+  image?: string;
 }
 
 const {
@@ -25,13 +27,16 @@ const {
   jsonLd,
   ogType = 'website',
   publishedTime,
+  image,
 } = Astro.props;
 
 // GitHub Pages serves directory-style URLs, so the canonical form carries a trailing slash.
 const path = Astro.url.pathname;
 const canonicalPath = path === '/' ? '/' : path.replace(/\/?$/, '/');
 const canonical = new URL(canonicalPath, site.url).href;
-const ogImage = new URL('/assets/og-image.jpg', site.url).href;
+// Facebook, LinkedIn and X all read this one tag. Without a per-page value
+// every post would be shared under the same generic card.
+const ogImage = new URL(image ?? '/assets/og-image.jpg', site.url).href;
 
 const personLd = {
   '@context': 'https://schema.org',
@@ -85,6 +90,7 @@ const personLd = {
     <meta property="og:type" content={ogType} />
     <meta property="og:url" content={canonical} />
     <meta property="og:image" content={ogImage} />
+    <meta property="og:image:alt" content={title} />
     {publishedTime && <meta property="article:published_time" content={publishedTime} />}
 
     <meta name="twitter:card" content="summary_large_image" />

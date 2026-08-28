@@ -4,6 +4,7 @@ description: "At the end of a panel, a Buddhist monk declined the question we ha
 date: 2026-08-26
 hero: "/assets/bangkok-monk-hero.webp"
 thumb: "/assets/bangkok-monk-thumb.webp"
+share: "/assets/reflections-ai-ethics-bangkok-share.jpg"
 heroCredit: "Shan A. Rajpoot / Unsplash"
 heroCreditUrl: "https://unsplash.com/photos/interior-of-a-traditional-buddhist-temple-with-statues-fnSfQPI4O_I"
 tags: ["AI ethics", "Buddhism", "Bangkok"]

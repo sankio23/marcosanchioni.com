@@ -37,6 +37,7 @@ const articleLd = {
   description={post.data.description}
   ogType="article"
   jsonLd={articleLd}
+  image={post.data.share ?? post.data.hero}
   publishedTime={post.data.date.toISOString()}
 >
   <article>
