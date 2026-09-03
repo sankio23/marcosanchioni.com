@@ -1,5 +1,7 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+// KaTeX's stylesheet, loaded only on the pages that can contain formulas.
+import 'katex/dist/katex.min.css';
 import { getCollection, render } from 'astro:content';
 import type { GetStaticPaths } from 'astro';
 
@@ -172,6 +174,39 @@ const articleLd = {
     color: var(--ink-dim);
   }
   .hero-credit + .back-link { margin-top: 1.5rem; }
+  /* Figures drawn as inline SVG: they take their colours from the page, so
+     they stay right in any future change of palette. */
+  .prose :global(.figure) {
+    margin: 2.5rem 0;
+  }
+  .prose :global(.figure svg) {
+    width: 100%;
+    height: auto;
+    display: block;
+    font-family: var(--serif);
+  }
+  .prose :global(.figure figcaption) {
+    margin-top: 1rem;
+    font-family: var(--display);
+    font-size: 0.86rem;
+    line-height: 1.5;
+    color: var(--ink-dim);
+    text-align: center;
+  }
+  /* The legend lives in the caption rather than inside the drawing: SVG text
+     shrinks with the viewBox and would be unreadable on a phone. */
+  .prose :global(.figure .k) { white-space: nowrap; }
+  .prose :global(.figure .k::before) {
+    content: "";
+    display: inline-block;
+    width: 1.1em; height: 2px;
+    margin-right: 0.4em;
+    vertical-align: 0.25em;
+  }
+  .prose :global(.figure .k1::before) { background: rgba(185,190,196,.38); }
+  .prose :global(.figure .k2::before) { background: rgba(185,190,196,.68); }
+  .prose :global(.figure .k3::before) { background: var(--accent); height: 3px; }
+
   .back-link {
     margin-top: 3rem;
     font-family: var(--display);
