@@ -27,7 +27,7 @@ const fmt = (d: Date) =>
         ) : (
           <ul class="card-list">
             {posts.map((post, i) => (
-              <li class:list={['card', 'reveal', !post.data.hero && 'card--plain']}>
+              <li class:list={['card', 'reveal', !post.data.hero && 'card--plain', i === 0 && 'card--latest']}>
                 {post.data.hero && (
                   <div class="card__media" aria-hidden="true">
                     <img
@@ -45,6 +45,7 @@ const fmt = (d: Date) =>
                 )}
                 <div class="card__body">
                   <p class="post-meta">
+                    {i === 0 && <span class="badge">Latest</span>}
                     <time datetime={post.data.date.toISOString()}>{fmt(post.data.date)}</time>
                   </p>
                   <h2><a href={`/blog/${post.id}`}>{post.data.title}</a></h2>
@@ -130,6 +131,30 @@ const fmt = (d: Date) =>
   .card h2 a { color: var(--ink); }
   .card h2 a:hover { color: var(--accent-soft); }
   .card p { color: var(--ink-soft); }
+
+  /* The most recent entry, marked once. "Latest" rather than "new" because a
+     static page cannot know how long it has been sitting there — the first
+     word stays true, the second would quietly become a lie. */
+  .card--latest { border-color: rgba(182, 240, 74, 0.42); }
+  .card--latest::before {
+    content: "";
+    position: absolute;
+    left: 0; top: 0; bottom: 0;
+    width: 3px;
+    background: linear-gradient(to bottom, var(--accent), rgba(182,240,74,0.25));
+    z-index: 1;
+  }
+  .badge {
+    display: inline-block;
+    margin-right: 0.7rem;
+    padding: 0.1rem 0.5rem;
+    border: 1px solid rgba(182, 240, 74, 0.5);
+    border-radius: 999px;
+    color: var(--accent);
+    font-size: 0.72rem;
+    letter-spacing: 0.14em;
+    vertical-align: 0.08em;
+  }
 
   .card--plain {
     background: var(--surface);

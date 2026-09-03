@@ -1,7 +1,7 @@
 ---
 title: "What Dirac's Delta Was Introduced For"
 description: "A note on when and how the delta function was introduced, and on how Dirac himself describes it in the 1927 paper and in the 1930 book."
-date: 2026-08-28
+date: 2026-09-03
 hero: "/assets/dirac-solvay-hero.webp"
 thumb: "/assets/dirac-solvay-thumb.webp"
 share: "/assets/dirac-delta-share.jpg"
