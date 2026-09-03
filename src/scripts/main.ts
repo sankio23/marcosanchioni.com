@@ -27,9 +27,17 @@ if (toggle && links) {
 const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 const revealables = document.querySelectorAll<HTMLElement>('.reveal');
 
+const revealAll = () => revealables.forEach((el) => el.classList.add('in'));
+
 if (reduceMotion || !('IntersectionObserver' in window)) {
-  revealables.forEach((el) => el.classList.add('in'));
+  revealAll();
 } else {
+  // threshold must stay 0. IntersectionObserver measures the visible fraction
+  // of the TARGET, not of the screen, so any element taller than
+  // viewport / threshold can never reach a proportional threshold and would
+  // stay hidden for good — which is what happened to long articles on phones.
+  // A negative bottom margin gives the same "enters from below" feel without
+  // depending on the element's height.
   const io = new IntersectionObserver(
     (entries) => {
       entries.forEach((e) => {
@@ -39,10 +47,14 @@ if (reduceMotion || !('IntersectionObserver' in window)) {
         }
       });
     },
-    { threshold: 0.12, rootMargin: '0px 0px -40px 0px' }
+    { threshold: 0, rootMargin: '0px 0px -10% 0px' }
   );
   revealables.forEach((el, i) => {
     el.style.transitionDelay = (i % 4) * 0.08 + 's';
     io.observe(el);
   });
+
+  // Belt and braces: content is never allowed to stay invisible because of a
+  // scripting quirk. Anything still hidden after a moment is shown anyway.
+  window.setTimeout(revealAll, 3000);
 }
