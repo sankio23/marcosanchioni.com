@@ -19,12 +19,17 @@ Physics knows other interactions, and each of them can in principle be used in t
 
 There are four fundamental interactions, and two theories describe them. Three are described by the Standard Model of particle physics, a quantum theory in which each interaction is carried by a particle. The fourth, gravity, is described by general relativity, a classical theory in which the interaction is the curvature of spacetime; a particle that would carry it, the graviton, is hypothetical. The table lists them.
 
-| Interaction | Carrier | Theory |
-| --- | --- | --- |
-| Electromagnetic | Photon | Standard Model |
-| Weak | W and Z bosons | Standard Model |
-| Strong | Gluons | Standard Model |
-| Gravitational | Graviton (hypothetical) | General relativity |
+<div style="margin:2.2rem auto;max-width:34rem;border:1px solid #b6f04a;border-radius:10px;overflow:hidden">
+<table style="width:100%;margin:0;border-collapse:collapse;border:0;font-size:1.02rem;line-height:1.35">
+<thead><tr><th style="font-family:Inter,system-ui,sans-serif;font-size:.72rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:#b6f04a;text-align:left;padding:.85rem 1.1rem;border:0;border-bottom:1px solid #b6f04a;background:transparent">Interaction</th><th style="font-family:Inter,system-ui,sans-serif;font-size:.72rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:#b6f04a;text-align:left;padding:.85rem 1.1rem;border:0;border-bottom:1px solid #b6f04a;background:transparent">Carrier</th><th style="font-family:Inter,system-ui,sans-serif;font-size:.72rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:#b6f04a;text-align:left;padding:.85rem 1.1rem;border:0;border-bottom:1px solid #b6f04a;background:transparent">Theory</th></tr></thead>
+<tbody>
+<tr><td style="padding:.9rem 1.1rem;border:0;border-bottom:1px solid rgba(182,240,74,.28);background:transparent;vertical-align:top"><strong style="font-weight:500">Electromagnetic</strong></td><td style="padding:.9rem 1.1rem;border:0;border-bottom:1px solid rgba(182,240,74,.28);background:transparent;vertical-align:top">Photon</td><td style="padding:.9rem 1.1rem;border:0;border-bottom:1px solid rgba(182,240,74,.28);background:transparent;vertical-align:top">Standard Model</td></tr>
+<tr><td style="padding:.9rem 1.1rem;border:0;border-bottom:1px solid rgba(182,240,74,.28);background:transparent;vertical-align:top"><strong style="font-weight:500">Weak</strong></td><td style="padding:.9rem 1.1rem;border:0;border-bottom:1px solid rgba(182,240,74,.28);background:transparent;vertical-align:top">W and Z bosons</td><td style="padding:.9rem 1.1rem;border:0;border-bottom:1px solid rgba(182,240,74,.28);background:transparent;vertical-align:top">Standard Model</td></tr>
+<tr><td style="padding:.9rem 1.1rem;border:0;border-bottom:1px solid rgba(182,240,74,.28);background:transparent;vertical-align:top"><strong style="font-weight:500">Strong</strong></td><td style="padding:.9rem 1.1rem;border:0;border-bottom:1px solid rgba(182,240,74,.28);background:transparent;vertical-align:top">Gluons</td><td style="padding:.9rem 1.1rem;border:0;border-bottom:1px solid rgba(182,240,74,.28);background:transparent;vertical-align:top">Standard Model</td></tr>
+<tr><td style="padding:.9rem 1.1rem;border:0;border-bottom:0;background:transparent;vertical-align:top"><strong style="font-weight:500">Gravitational</strong></td><td style="padding:.9rem 1.1rem;border:0;border-bottom:0;background:transparent;vertical-align:top">Graviton<br><span style="font-family:Inter,system-ui,sans-serif;font-size:.72rem;letter-spacing:.06em;color:rgba(185,190,196,.75)">hypothetical</span></td><td style="padding:.9rem 1.1rem;border:0;border-bottom:0;background:transparent;vertical-align:top">General relativity</td></tr>
+</tbody>
+</table>
+</div>
 
 ## A telescope that uses the weak interaction
 
