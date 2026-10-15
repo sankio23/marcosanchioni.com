@@ -3,7 +3,7 @@ title: "Can Communion Be Measured?"
 description: "From a seed to an index, fifteen years later. On the Multi-Faith Economy Index launched by Consulus in London, and on the conditions under which a relational good can be made visible without being turned into a performance."
 date: 2026-10-14
 hero: "/assets/can-communion-be-measured-hero.webp"
-heroAlt: "The red-brick Tudor gatehouse of Lambeth Palace in London against a blue sky."
+heroAlt: "Illustration of London landmarks, the London Eye and the Elizabeth Tower, in orange and grey, from the visual of the Consulus Global School 2026."
 thumb: "/assets/can-communion-be-measured-thumb.webp"
 share: "/assets/can-communion-be-measured-share.jpg"
 tags: ["economy of communion", "relational goods", "faith-based finance"]
@@ -28,7 +28,7 @@ This is where universities have a specific contribution to make, and where the p
 
 In Villafranca, the economist hoped that the Economy of Communion would one day receive scientific dignity. Fifteen years later the request has changed its source: it now comes from investors and faith communities who want to know what their money does, and Lawrence and the Consulus network have had the courage to answer it with an instrument that can be tested and improved. Indeed, a seed that grows becomes visible, and visibility exposes it to being measured and compared. The task now is to make sure that the instruments built to see it are adequate to what they are meant to see, which requires both the conceptual care of the first condition and the patience of the second. This is a task to be carried out together, and at Sophia we intend to take our part in it.
 
-*Cover photograph: the gatehouse of Lambeth Palace, by Matt Brown ([CC BY 4.0](https://creativecommons.org/licenses/by/4.0/), via [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Lambeth_Palace_gatehouse_2025-06-27.jpg)).*
+*Cover: detail of the visual of the Consulus Global School 2026, London, 14–16 October 2026, courtesy of Consulus.*
 
 [^prince]: The line plays on the fox's secret in A. de Saint-Exupéry, *Le Petit Prince*, Reynal & Hitchcock, 1943, ch. XXI: "l'essentiel est invisible pour les yeux".
 
