@@ -1,7 +1,7 @@
 ---
 title: "Not Another Sudoku"
 description: "What plural spaces can do for the university. Notes after the Consulus Global School in London, on specialisation, trading zones and transdisciplinarity."
-date: 2026-10-16
+date: 2026-10-17
 hero: "/assets/not-another-sudoku-hero.webp"
 heroAlt: "A hand holding a pencil over a book of sudoku puzzles, some cells already filled in."
 thumb: "/assets/not-another-sudoku-thumb.webp"
