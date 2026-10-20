@@ -3,7 +3,7 @@ title: "No View from Nowhere"
 description: "Relations, polarization, and fraternity. A summary of my talk at the VIII International Seminar of the RUEF in Santiago de Chile, on what the relational picture of quantum theory can suggest about polarization and fraternity."
 date: 2026-10-20
 hero: "/assets/no-view-from-nowhere-hero.webp"
-heroAlt: "Graphic of the VIII International Seminar of the RUEF, Los desafíos de la fraternidad en tiempos de polarización, Santiago de Chile, 20 and 21 October 2026."
+heroAlt: "Coloured stripes on a grey ground, from the graphic design of the VIII International Seminar of the RUEF, Santiago de Chile."
 thumb: "/assets/no-view-from-nowhere-thumb.webp"
 share: "/assets/no-view-from-nowhere-share.jpg"
 tags: ["fraternity", "polarization", "relational quantum mechanics"]
