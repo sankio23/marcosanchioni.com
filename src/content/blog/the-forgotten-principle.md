@@ -1,7 +1,7 @@
 ---
 title: "The Forgotten Principle"
 description: "Fraternity as a political category, and a network that has taken it seriously. Notes after the VIII International Seminar of RUEF in Santiago de Chile."
-date: 2026-10-22
+date: 2026-10-24
 hero: "/assets/the-forgotten-principle-hero.webp"
 heroAlt: "Group photo of the participants of the VIII International Seminar of RUEF in a gallery hall in Santiago de Chile."
 thumb: "/assets/the-forgotten-principle-thumb.webp"
