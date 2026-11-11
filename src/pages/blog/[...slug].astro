@@ -41,6 +41,7 @@ const articleLd = {
   jsonLd={articleLd}
   image={post.data.share ?? post.data.hero}
   publishedTime={post.data.date.toISOString()}
+  noindex={post.data.unlisted}
 >
   <article>
     <section class:list={['post-hero', hero && 'post-hero--picture']}>

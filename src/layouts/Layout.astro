@@ -19,6 +19,8 @@ interface Props {
   publishedTime?: string;
   /** Sharing card image for this page; defaults to the site card. */
   image?: string;
+  /** Keep this page out of search engines. */
+  noindex?: boolean;
 }
 
 const {
@@ -28,6 +30,7 @@ const {
   ogType = 'website',
   publishedTime,
   image,
+  noindex = false,
 } = Astro.props;
 
 // GitHub Pages serves directory-style URLs, so the canonical form carries a trailing slash.
@@ -74,6 +77,7 @@ const personLd = {
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    {noindex && <meta name="robots" content="noindex, nofollow" />}
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{title}</title>
     <meta name="description" content={description} />

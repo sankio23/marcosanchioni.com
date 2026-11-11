@@ -17,6 +17,9 @@ const blog = defineCollection({
     heroCreditUrl: z.string().optional(),
     heroPosition: z.string().optional(),
     draft: z.boolean().default(false),
+    // Built and reachable by its URL, but kept out of the blog list, the RSS
+    // feed and search engines: for sharing a post privately before release.
+    unlisted: z.boolean().default(false),
   }),
 });
 

@@ -4,6 +4,9 @@ import sitemap from '@astrojs/sitemap';
 import remarkMath from 'remark-math';
 import rehypeKatex from 'rehype-katex';
 
+// Slugs of posts published with `unlisted: true`; keep in sync with their front matter.
+const UNLISTED = ['what-can-be-measured'];
+
 export default defineConfig({
   site: 'https://www.marcosanchioni.com',
   // GitHub Pages serves `/about/` from `about/index.html` and 301-redirects
@@ -16,5 +19,6 @@ export default defineConfig({
     remarkPlugins: [remarkMath],
     rehypePlugins: [rehypeKatex],
   },
-  integrations: [sitemap()],
+  // Unlisted posts (front matter `unlisted: true`) stay out of the sitemap too.
+  integrations: [sitemap({ filter: (page) => !UNLISTED.some((slug) => page.includes(`/blog/${slug}/`)) })],
 });
