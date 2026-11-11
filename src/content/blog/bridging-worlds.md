@@ -44,7 +44,7 @@ In classical logic every statement is either true (1) or false (0). The arrow $X
 | 0 | 1 | 1 |
 | 0 | 0 | 1 |
 
-The arrow is false in one case only: when $X$ is true and $Y$ is false. If $X$ is false, the arrow makes no claim, and it counts as true.
+The arrow is false in one case only: when $X$ is true and $Y$ is false. If $X$ is false, the arrow is true whatever the truth value of $Y$: it keeps a definite truth value, but places no constraint on $Y$.
 
 This is all we need to talk about conditions. Saying that $X$ is *sufficient* for $Y$ means that, in every case we look at, if $X$ then $Y$:
 
@@ -58,7 +58,7 @@ $$
 Y \rightarrow X .
 $$
 
-<mark>Sufficiency and necessity are the same arrow, read in opposite directions.</mark> And in classical logic a single case in which the arrow fails, one country with $X$ and without $Y$, is enough to refute the claim that $X$ is sufficient for $Y$.
+Every arrow can be read in two ways: in $X \rightarrow Y$, $X$ is sufficient for $Y$, and $Y$ is necessary for $X$. <mark>Claiming that $X$ is sufficient for $Y$ and claiming that it is necessary for $Y$ are therefore two different claims, expressed by arrows that point in opposite directions: one can be true while the other is false.</mark> And in classical logic a single case in which the arrow fails, one country with $X$ and without $Y$, is enough to refute the claim that $X$ is sufficient for $Y$.
 
 ### When truth comes in degrees
 
