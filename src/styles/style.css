@@ -353,6 +353,11 @@ h1, h2 { font-family: var(--serif); font-weight: 400; letter-spacing: -.015em; }
   border-radius: 12px; padding: 1.2rem; overflow-x: auto;
 }
 .prose pre code { background: none; border: none; padding: 0; }
+.prose table { width: 100%; border-collapse: collapse; font-family: var(--display); font-size: .92rem; line-height: 1.5; }
+.prose th, .prose td { padding: .45rem .7rem; border-bottom: 1px solid var(--line-soft); }
+.prose th { color: var(--ink); font-weight: 600; border-bottom: 1px solid var(--line); }
+.prose tbody tr:last-child td { border-bottom: none; }
+.prose .katex-display { overflow-x: auto; overflow-y: hidden; padding-block: .2rem; }
 .prose hr { border: none; border-top: 1px solid var(--line-soft); margin-block: 2.4rem; }
 .prose img { border-radius: 12px; border: 1px solid var(--line); }
 .prose a { text-decoration: underline; text-underline-offset: 3px; }
