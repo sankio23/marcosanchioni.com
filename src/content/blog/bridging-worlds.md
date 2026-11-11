@@ -70,7 +70,7 @@ Now suppose that the statements themselves are graded. "This country is free in 
 | $X$ and $Z$ | true when both are true | the smaller of $x$ and $z$ |
 | $X$ or $Z$ | true when at least one is true | the larger of $x$ and $z$ |
 
-<mark>When the degrees are only 0 and 1, these rules give back the classical ones exactly.</mark> The arrow can be generalised in the same spirit. A standard choice, due to the Polish logician Jan Łukasiewicz, is
+<mark>When the degrees are only 0 and 1, these rules give back the classical ones exactly.</mark> The arrow can be generalised in the same spirit. A standard choice, due to the Polish logician Jan Łukasiewicz, is[^tnorm]
 
 $$
 X \rightarrow Y \;\text{ is true to degree }\; \min\big(1,\; 1 - x + y\big).
@@ -147,6 +147,8 @@ There is a broader question here about what can and cannot be measured in this f
 
 
 [^zadeh]: L. A. Zadeh, "Fuzzy sets", *Information and Control* 8 (1965), 338–353.
+
+[^tnorm]: Fuzzy logic offers several ways of defining "and" and "if… then", and the ones presented here are only one choice. Conjunction can be any of the operations logicians call *t-norms*: besides the minimum used in the table above (Gödel's t-norm), common options are the product $x \cdot y$ and Łukasiewicz's t-norm $\max(0,\, x + y - 1)$. Each t-norm comes with its own implication: the one used here belongs to Łukasiewicz's t-norm, while the minimum goes with Gödel's implication, which is 1 when $x \le y$ and $y$ otherwise. All of them agree with classical logic when the degrees are 0 and 1, and all make the arrow fully true exactly when $x \le y$, which is what matters for the argument; the Łukasiewicz implication has the advantage of losing truth gradually. The choice is not innocent, though. With Łukasiewicz's t-norm, for instance, "$X$ and not $X$" always has degree 0, so the second change described below holds for the minimum but not for every t-norm. See P. Hájek, *Metamathematics of Fuzzy Logic*, Kluwer, 1998.
 
 [^ragin]: C. C. Ragin, *Fuzzy-Set Social Science*, University of Chicago Press, 2000; *Redesigning Social Inquiry: Fuzzy Sets and Beyond*, University of Chicago Press, 2008.
 
