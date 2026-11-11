@@ -2,10 +2,10 @@
 title: "Bridging Worlds"
 description: "Notes after a conference in Castel Gandolfo on religion and development. If religious freedom and integral human development are graded concepts, the search for causes needs a logic of degrees."
 date: 2026-11-11
-hero: "/assets/bridging-worlds-hero.webp"
+hero: "/assets/bridging-worlds-ac-hero.webp"
 heroAlt: "Mountain ridges in the light of dawn on a dark blue ground, from the visual of the Bridging Worlds public roundtable of the Atlantic Council Freedom and Prosperity Center."
-thumb: "/assets/bridging-worlds-thumb.webp"
-share: "/assets/bridging-worlds-share.jpg"
+thumb: "/assets/bridging-worlds-ac-thumb.webp"
+share: "/assets/bridging-worlds-ac-share.jpg"
 tags: ["religion", "development", "philosophy of social science"]
 ---
 
