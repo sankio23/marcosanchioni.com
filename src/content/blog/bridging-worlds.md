@@ -3,7 +3,7 @@ title: "Bridging Worlds"
 description: "Notes after a conference in Castel Gandolfo on religion and development. If religious freedom and integral human development are graded concepts, the search for causes needs a logic of degrees."
 date: 2026-11-11
 hero: "/assets/bridging-worlds-hero.webp"
-heroAlt: "Two overlapping circles with soft, graded edges, one green and one blue-grey, on a dark ground."
+heroAlt: "Mountain ridges in the light of dawn on a dark blue ground, from the visual of the Bridging Worlds public roundtable of the Atlantic Council Freedom and Prosperity Center."
 thumb: "/assets/bridging-worlds-thumb.webp"
 share: "/assets/bridging-worlds-share.jpg"
 tags: ["religion", "development", "philosophy of social science"]
@@ -132,6 +132,8 @@ I do not want to overstate the point. These methods have their own difficulties,
 The conference has already produced the material this would need. Its workshops gathered detailed cases of faith-based development from different traditions, and its research agenda includes the possibility of a permanent observatory on faith-based development. My suggestion is that such an observatory pair its indices with a systematic comparison of cases, asking which combinations of conditions, in which degrees, go together with which outcomes, and testing whether its findings survive different ways of making its central concepts precise. This would not replace the measurement of the footprint. <mark>It would make clear what the measurement can and cannot tell us, which is what makes evidence useful to policy.</mark>
 
 There is a broader question here about what can be measured in this field at all, and about what the history of measurement in the natural sciences can teach it. I will try to address it in the next note.
+
+*Cover: detail of the visual of the public roundtable "Religion, development, and peace: What is the future of global partnerships?", Atlantic Council Freedom and Prosperity Center.*
 
 [^pp]: Paul VI, *Populorum Progressio* (1967), §14.
 
