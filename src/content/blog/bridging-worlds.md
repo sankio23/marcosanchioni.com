@@ -129,11 +129,11 @@ The difference is not only technical. Average effects assume, roughly, that a fa
 
 I do not want to overstate the point. These methods have their own difficulties, from the choice of the degrees assigned to each case to the limits of causal inference from a small number of cases, and vagueness can also be treated without fuzzy logic, for instance by asking what is true under every admissible precisification.[^fine] The point is only that <mark>the choice of logic is part of the analytical framework</mark>, and that it is worth making it consciously.
 
-## A language for the bridge
+## Keeping our statements under control
 
-Petito described the conference as an exercise in mutual learning, in which religious actors learn the language of evidence and the policy world learns to attend to what it usually does not see. Bridges of this kind need translators, and a logic of degrees might be one modest instrument among them. It is rigorous enough to be spoken in the language of evidence. Yet <mark>it does not force religious realities into the yes-or-no categories that so often distort them</mark>: it can say that a society is partly free, that a practice contributes in part, that something is present without being complete.
+What logic offers here is not a new body of evidence, but a way of keeping under control the statements we make. When we say that religion contributes to development, or that religious freedom matters for flourishing, it helps to know what exactly we are claiming. Is a condition sufficient, or necessary, or one ingredient among others? Is it present or absent, or present to a degree? Does the claim say that two things vary together, or that one cannot be had without the other? <mark>These are different statements, and they call for different kinds of evidence.</mark> Logic does not tell us which of them is true. It helps us see which one we are making, and what would count for or against it.
 
-Petito called the projects presented at the conference "seeds of hope". A seed is precisely something that exists to a degree, not yet fully what it will become. <mark>A logic with only two values has no way to describe a seed. A logic of degrees does.</mark>
+This seems to me a small contribution to the mutual learning Petito spoke of. A logic of degrees is rigorous enough to be shared with the language of evidence, and yet <mark>it does not force religious realities into yes-or-no categories</mark>: it can say that a society is partly free, or that a practice contributes in part. Petito called the projects presented at the conference "seeds of hope". A seed is something that exists to a degree, not yet fully what it will become, and it is worth having a logic able to say so.
 
 There is a broader question here about what can and cannot be measured in this field at all, and about what the history of the natural sciences can teach it. I will come back to it in the next note.
 
