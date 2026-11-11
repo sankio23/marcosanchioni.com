@@ -17,7 +17,7 @@ Faith-based institutions run a large share of the world's schools, clinics and h
 
 James Mazzarella, who opened the conference for the Freedom and Prosperity Center, was candid about what is missing. We know that faith-based organisations matter, he said, but we struggle to show how much, in which settings, through which mechanisms and with what outcomes; nor should we assume that religious identity automatically confers effectiveness, legitimacy or accountability. His conclusion was simple: <mark>"We need better evidence. We need stronger analytical frameworks."</mark> Fabio Petito, speaking for the academic committee, described the two lines of work that follow from this: mapping and measuring the faith-based development footprint, and listening to practitioners whose projects already embody a broader idea of development. He presented them as a form of mutual learning, in which religious actors learn the language of evidence and the policy world learns to attend to what it usually does not see.
 
-I would like to take Mazzarella's request at its word, and offer a small contribution from the philosophy of science to the analytical frameworks he asked for. <mark>It concerns the kind of concepts this research works with, and the kind of logic they require.</mark>
+I would like to take Mazzarella's request at its word, and offer a small contribution from the philosophy of science to the analytical frameworks he asked for. It is not a new way of measuring. It is a tool for thinking: <mark>a reflection on the kind of concepts this research works with, and on the kind of logic they require.</mark>
 
 ## Graded concepts
 
@@ -94,7 +94,7 @@ $$
 \text{consistency}(X \rightarrow Y) \;=\; \frac{\sum_c \min(x_c,\, y_c)}{\sum_c x_c},
 $$
 
-where the sums run over the cases $c$. It equals 1 when, in every case, $Y$ is at least as true as $X$, and it falls as cases depart from this. Here is a toy example with four invented countries:
+where the sums run over the cases $c$. It equals 1 when, in every case, $Y$ is at least as true as $X$, and it falls as cases depart from this. The numbers matter less than what they show, so a toy example with four invented countries is enough:
 
 | Country | $x$ (religious freedom) | $y$ (flourishing) | smaller of the two |
 |:---|:---:|:---:|:---:|
@@ -129,11 +129,13 @@ The difference is not only technical. Average effects assume, roughly, that a fa
 
 I do not want to overstate the point. These methods have their own difficulties, from the choice of the degrees assigned to each case to the limits of causal inference from a small number of cases, and vagueness can also be treated without fuzzy logic, for instance by asking what is true under every admissible precisification.[^fine] The point is rather that <mark>the choice of logic is part of the analytical framework, and it should be made deliberately.</mark>
 
-## A proposal
+## What logic is for
 
-The conference has already produced the material this would need. Its workshops gathered detailed cases of faith-based development from different traditions, and its research agenda includes the possibility of a permanent observatory on faith-based development. My suggestion is that such an observatory pair its indices with a systematic comparison of cases, asking which combinations of conditions, in which degrees, go together with which outcomes, and testing whether its findings survive different ways of making its central concepts precise. This would not replace the measurement of the footprint. <mark>It would make clear what the measurement can and cannot tell us, which is what makes evidence useful to policy.</mark>
+None of this is meant to turn the study of religion and development into a matter of computation. Logic is useful here in a more modest and, I think, more important way: it helps us notice what kind of claim we are making before we look for evidence. Before asking how much religious freedom contributes to flourishing, we can ask whether we mean that it is sufficient, or necessary, or one ingredient among others. Before treating a society that is free in law and hostile in practice as a puzzle, we can recognise that it is simply partly free and partly not. And before reading a weak correlation as a sign that something does not matter, we can ask whether it might be a condition without which nothing else works.
 
-There is a broader question here about what can be measured in this field at all, and about what the history of measurement in the natural sciences can teach it. I will try to address it in the next note.
+<mark>The conference asked for stronger analytical frameworks. Part of what that means, I think, is clearer questions.</mark> The cases gathered in its workshops, from different traditions and continents, are an ideal place to ask them, not to reduce each experience to a number, but to see more precisely what each one shows and what it does not.
+
+There is a broader question here about what can and cannot be measured in this field at all, and about what the history of the natural sciences can teach it. I will come back to it in the next note.
 
 *Cover: detail of the visual of the public roundtable "Religion, development, and peace: What is the future of global partnerships?", Atlantic Council Freedom and Prosperity Center.*
 
