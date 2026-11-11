@@ -358,11 +358,6 @@ h1, h2 { font-family: var(--serif); font-weight: 400; letter-spacing: -.015em; }
 .prose th { color: var(--ink); font-weight: 600; border-bottom: 1px solid var(--line); }
 .prose tbody tr:last-child td { border-bottom: none; }
 .prose .katex-display { overflow-x: auto; overflow-y: hidden; padding-block: .2rem; }
-.prose mark {
-  color: inherit; background: none; padding: 0 .05em;
-  background-image: linear-gradient(transparent 62%, rgba(182, 240, 74, .28) 62%);
-  -webkit-box-decoration-break: clone; box-decoration-break: clone;
-}
 .prose hr { border: none; border-top: 1px solid var(--line-soft); margin-block: 2.4rem; }
 .prose img { border-radius: 12px; border: 1px solid var(--line); }
 .prose a { text-decoration: underline; text-underline-offset: 3px; }
