@@ -5,7 +5,7 @@ import remarkMath from 'remark-math';
 import rehypeKatex from 'rehype-katex';
 
 // Slugs of posts published with `unlisted: true`; keep in sync with their front matter.
-const UNLISTED = ['what-can-be-measured'];
+const UNLISTED = [];
 
 export default defineConfig({
   site: 'https://www.marcosanchioni.com',

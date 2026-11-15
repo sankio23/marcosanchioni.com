@@ -1,13 +1,12 @@
 ---
 title: "What Can Be Measured?"
 description: "Galileo chose to measure the affections of things rather than their essence, and physics was born. The same choice can serve the study of religion and development, but only on one condition."
-date: 2026-11-13
+date: 2026-11-15
 hero: "/assets/what-can-be-measured-hero.webp"
 heroAlt: "A pale solar disc with groups of dark sunspots on a black ground, in the manner of Galileo's sunspot drawings of 1612."
 thumb: "/assets/what-can-be-measured-thumb.webp"
 share: "/assets/what-can-be-measured-share.jpg"
 tags: ["measurement", "philosophy of science", "religion and development"]
-unlisted: true
 ---
 
 At the [Bridging Worlds](/blog/bridging-worlds/) conference in Castel Gandolfo, one of the two lines of work was the attempt to map and measure what faith-based actors contribute to development. In the previous note I looked at the logic of the statements this research makes. Here I want to ask a prior question, which the natural sciences faced long ago: what exactly can be measured when the object is something like communion, trust or the common good, and what can the history of physics teach us about it?
@@ -36,9 +35,13 @@ The lesson is encouraging. The mapping of faith-based development is at somethin
 
 ## The risk of washing
 
-The two disanalogies together explain a risk that the recent history of finance has made familiar. Environmental, social and governance ratings were designed to make sustainability visible to investors, and they did. But because what they measured could be produced without the substance it was meant to signal, they also made room for greenwashing, i.e. the production of measurable sustainability without much sustainability behind it. The different agencies often disagree about the same firm,[^esg] and the European Union has recently had to regulate the rating activity itself.[^eu]
+The two disanalogies together point to a risk that finance knows well under the name of greenwashing: appearing more sustainable than one is.
 
-The same could happen here. <mark>The separability of effects from essence, which in physics is a virtue, is precisely what makes counterfeiting possible when the measured have an interest in the result.</mark> One might call the danger faith-washing: the production of the measurable affections of a faith-based contribution without the relational good they are supposed to signal. This is not an accusation against anyone. It is a structural possibility, and it follows from the very choice that makes measurement possible.
+Its structure is instructive. Environmental, social and governance (ESG) ratings were meant to make sustainability visible to investors. But a rating rarely observes the environmental effect itself. It observes what the firm discloses: policies, targets, reports, certifications. These are the affections of sustainability, in Galileo's sense, and they can be produced without much of its substance. Firms disclose selectively,[^lyon] larger firms score better whatever their impact,[^size] and different agencies often disagree about the same firm.[^esg] The European Union has had to restrict unsubstantiated green claims and to regulate the rating activity itself.[^eu] Nor is greenwashing always fraud. Often it is a quiet drift, by which an organisation learns to produce what is counted rather than what the counting was meant to track: when a measure becomes a target, it ceases to be a good measure.[^goodhart]
+
+The analogy can now be made explicit. Washing becomes possible when three conditions hold together: the measure tracks proxies rather than the thing itself; the measured have an interest in the result; and the proxy is cheaper to produce than the substance. In faith-based development, the first condition is the first disanalogy, since no law ties the affections to the relational good. The second is the second disanalogy, since recognition and funding increasingly depend on the indicators. The third holds wherever reports and impact figures are easier to produce than trust and communion.
+
+<mark>The separability of effects from essence, which in physics is a virtue, is precisely what makes counterfeiting possible when the measured have an interest in the result.</mark> One might call the danger faith-washing: the production of the measurable affections of a faith-based contribution without the relational good they are supposed to signal. Like greenwashing, it need not be deliberate. This is not an accusation against anyone. It is a structural possibility, and it follows from the very choice that makes measurement possible. What exposed greenwashing was not more disclosure but evidence the firms had not produced themselves, and the same will hold here: <mark>something must stand outside the indicators and be able to correct them.</mark>
 
 ## A condition, and a task
 
@@ -56,6 +59,12 @@ This is, in the end, academic work, and of a kind that no single discipline can 
 
 [^chang]: H. Chang, *Inventing Temperature: Measurement and Scientific Progress*, Oxford University Press, 2004.
 
+[^lyon]: T. P. Lyon and J. W. Maxwell, "Greenwash: corporate environmental disclosure under threat of audit", *Journal of Economics & Management Strategy* 20 (2011), 3–41.
+
+[^size]: S. Drempetic, C. Klein and B. Zwergel, "The influence of firm size on the ESG score: corporate sustainability ratings under review", *Journal of Business Ethics* 167 (2020), 333–360.
+
 [^esg]: F. Berg, J. F. Kölbel and R. Rigobon, "Aggregate confusion: the divergence of ESG ratings", *Review of Finance* 26 (2022), 1315–1344.
 
-[^eu]: Regulation (EU) 2024/3005 on the transparency and integrity of environmental, social and governance (ESG) rating activities.
+[^eu]: Directive (EU) 2024/825 on empowering consumers for the green transition, which restricts generic environmental claims; Regulation (EU) 2024/3005 on the transparency and integrity of environmental, social and governance (ESG) rating activities.
+
+[^goodhart]: The formulation is due to M. Strathern, "'Improving ratings': audit in the British University system", *European Review* 5 (1997), 305–321, who generalised an observation of the economist Charles Goodhart on monetary targets.

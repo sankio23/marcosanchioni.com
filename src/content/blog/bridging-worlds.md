@@ -135,7 +135,7 @@ What logic offers here is not a new body of evidence, but a way of keeping under
 
 This seems to me a small contribution to the mutual learning Petito spoke of. Statements about religion and development travel between very different worlds, from religious communities to universities and policy institutions, and each world tends to hear them in its own way. Being clear about what kind of statement we are making is one way of making sure that, when they arrive, they still say what we meant.
 
-There is a broader question here about what can and cannot be measured in this field at all, and about what the history of the natural sciences can teach it. I will come back to it in the next note.
+There is a broader question here about what can and cannot be measured in this field at all, and about what the history of the natural sciences can teach it. I come back to it in [the next note](/blog/what-can-be-measured/).
 
 *Cover: detail of the visual of the public roundtable "Religion, development, and peace: What is the future of global partnerships?", Atlantic Council Freedom and Prosperity Center.*
 
