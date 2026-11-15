@@ -2,10 +2,10 @@
 title: "What Can Be Measured?"
 description: "Galileo chose to measure the affections of things rather than their essence, and physics was born. The same choice can serve the study of religion and development, but only on one condition."
 date: 2026-11-15
-hero: "/assets/what-can-be-measured-hero.webp"
-heroAlt: "A pale solar disc with groups of dark sunspots on a black ground, in the manner of Galileo's sunspot drawings of 1612."
-thumb: "/assets/what-can-be-measured-thumb.webp"
-share: "/assets/what-can-be-measured-share.jpg"
+hero: "/assets/what-can-be-measured-gal-hero.webp"
+heroAlt: "Galileo's face, from Justus Sustermans' portrait of 1636, fading into a faint financial chart on a dark ground."
+thumb: "/assets/what-can-be-measured-gal-thumb.webp"
+share: "/assets/what-can-be-measured-gal-share.jpg"
 tags: ["measurement", "philosophy of science", "religion and development"]
 ---
 
@@ -47,7 +47,7 @@ The conclusion I draw from this is a condition on measurement. <mark>Galileo's c
 
 This is academic work of a kind that no single discipline can carry out alone. In particular, it requires the collaboration of philosophers of measurement, social scientists, economists and theologians, together with the practitioners whose experience is being measured. The Bridging Worlds conference has opened the question, and answering it will take years of work.
 
-*Cover: an illustration after Galileo's sunspot drawings of 1612.*
+*Cover: a detail of Justus Sustermans' portrait of Galileo Galilei (1636), with a financial chart.*
 
 [^galileo]: G. Galilei, third letter to Mark Welser on sunspots, 1 December 1612, in *Istoria e dimostrazioni intorno alle macchie solari*, Rome, 1613: "o noi vogliamo specolando tentar di penetrar l'essenza vera ed intrinseca delle sustanze naturali; o noi vogliamo contentarci di venir in notizia d'alcune loro affezioni". The translation is mine.
 
