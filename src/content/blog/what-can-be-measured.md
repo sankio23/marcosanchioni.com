@@ -2,10 +2,10 @@
 title: "What Can Be Measured?"
 description: "Galileo chose to measure the affections of things rather than their essence, and physics was born. The same choice can serve the study of religion and development, but only on one condition."
 date: 2026-11-15
-hero: "/assets/what-can-be-measured-gal-hero.webp"
-heroAlt: "Galileo's face, from Justus Sustermans' portrait of 1636, fading into a faint financial chart on a dark ground."
-thumb: "/assets/what-can-be-measured-gal-thumb.webp"
-share: "/assets/what-can-be-measured-gal-share.jpg"
+hero: "/assets/what-can-be-measured-gal2-hero.webp"
+heroAlt: "Galileo's face, from Justus Sustermans' portrait of 1636, dissolving into a glowing financial chart on a dark ground."
+thumb: "/assets/what-can-be-measured-gal2-thumb.webp"
+share: "/assets/what-can-be-measured-gal2-share.jpg"
 tags: ["measurement", "philosophy of science", "religion and development"]
 ---
 
